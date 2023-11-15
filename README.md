@@ -21,7 +21,8 @@ To work properly, you need to set up an environment variable called `OPENAI_API_
 
 The frontend interface allows users to enter the name of a city. Upon submitting the request, the frontend makes a call to the backend to fetch information about the city and displays it on the screen.
 
-![Frontend Interface]](https://github.com/kevind13/City-Information-GPT/assets/17632891/d4a8de51-c761-4bba-ad14-2ff60498c6fa)
+![Frontend interface](https://github.com/kevind13/City-Information-GPT/assets/17632891/67f2928f-54e0-42f5-9e65-2798df0b511a)
+
 
 
 ### Usage
