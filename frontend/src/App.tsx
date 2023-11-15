@@ -6,10 +6,12 @@ import { getCityInfo } from './services/city';
 
 const App = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [loading, setLoading] = useState<boolean>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const chatDisplayRef = useRef<any>(null);
 
   const handleMessageSubmit = async (message: string) => {
+    setLoading(true);
     const cityInfo = await getCityInfo(message);
 
     let cityMessage: Message = { text: cityInfo.text, sender: 'bot' };
@@ -20,7 +22,8 @@ const App = () => {
       cityMessage = { text: cityInfo.text, sender: 'bot', cityInfo: cityInfo.cityInfo };
     }
 
-    setMessages([...messages, newMessage, cityMessage]);
+    setMessages((prevMessages) =>[...prevMessages, newMessage, cityMessage]);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -34,7 +37,7 @@ const App = () => {
       <h1 className='text-3xl font-bold mb-8'>City Information Chat</h1>
       <div className='chat-container bg-white rounded shadow-lg w-[90vw] p-4 h-[35rem] relative'>
         <div ref={chatDisplayRef} className='overflow-y-auto h-full pb-12'>
-          <ChatDisplay messages={messages} />
+          <ChatDisplay messages={messages} loading={loading}/>
         </div>
         <div className='absolute bottom-0 left-1/4 w-[50%] mb-4 bg-white'>
           <ChatInput onSubmit={handleMessageSubmit} />
