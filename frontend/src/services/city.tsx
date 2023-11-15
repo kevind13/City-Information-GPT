@@ -1,11 +1,12 @@
 import { CityResponse } from "../models/message";
+import { SERVER_URL } from "../utils";
 
 export const getCityInfo = async (
     city: string,
   ): Promise<CityResponse> => {
   
     try {
-        const response = await fetch('http://localhost:5001/getCityInfo', {
+        const response = await fetch(`${SERVER_URL}/getCityInfo`, {
           method: 'POST',
         headers: {
             'Content-Type': 'application/json'
