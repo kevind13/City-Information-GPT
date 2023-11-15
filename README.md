@@ -1,6 +1,7 @@
 # City Information Chat
 
-![City Information Chat](https://example.com/image.jpg)
+<img width="405" alt="Screenshot 2023-11-15 at 1 04 53 PM" src="https://github.com/kevind13/City-Information-GPT/assets/17632891/cf2a89f9-9e15-4720-ae9c-1f38b0ab4912">
+
 
 City Information Chat is a system that allows retrieving basic information about a city by integrating with the OpenAI API.
 
@@ -20,7 +21,8 @@ To work properly, you need to set up an environment variable called `OPENAI_API_
 
 The frontend interface allows users to enter the name of a city. Upon submitting the request, the frontend makes a call to the backend to fetch information about the city and displays it on the screen.
 
-![Frontend Interface](https://example.com/frontend_image.jpg)
+![Frontend Interface]](https://github.com/kevind13/City-Information-GPT/assets/17632891/d4a8de51-c761-4bba-ad14-2ff60498c6fa)
+
 
 ### Usage
 
